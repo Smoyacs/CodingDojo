@@ -26,3 +26,6 @@ console.log(num2);
 // 20
 // 15
 
+for (var b = 10; b < 100; b += 10) {   
+    console.log(b);
+}
