@@ -5,6 +5,8 @@
 /* unvisited link */
 a:link {
   color: red;
+  background-color: greenyellow;
+  
 }
 
 /* visited link */
@@ -15,11 +17,13 @@ a:visited {
 /* mouse over link */
 a:hover {
   color: hotpink;
+  text-decoration: underline;
 }
 
 /* selected link */
 a:active {
   color: blue;
+  text-decoration: underline;
 }
 </style>
 </head>
@@ -27,8 +31,13 @@ a:active {
 
 <h2>Links'll depends on state</h2>
 
-<p style="text-align: center;background-color: aqua;"><b><a class="glyphicon glyphicon-cloud" href="https://www.google.com" target="_blank"></a></b>   Link de google en icono</p>
-<p style="text-align: center;"><b><a href="https://www.youtube.com" target="_blank">link youtube</a></b></p>
+<p style="text-align: center;">
+  <b><a class="glyphicon glyphicon-cloud" href="https://www.google.com" target="_blank"></a></b>
+     Link de google en icono</p>
+
+<p style="text-align: center;">
+  <b><a href="https://www.youtube.com" target="_blank">link youtube</a></b>
+      link de youtube sin icono</p>
 
 <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
 <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
