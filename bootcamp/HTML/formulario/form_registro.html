@@ -1,43 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="utf-8"> 
-    <title>Mi formulario de Registro</title>
+    <meta charset="utf-8">
+
+    <head>
+        <title>Mi formulario de Registro</title>
+    </head>
 
     <h1>Mi formulario de Registro</h1>
 
-    <form>
-
-        <label>
-
-            Nombre: <input type="text" name="nombre"><p> </p>
-            Apellido: <input type="text" name="apellido"><p> </p>
-            Email: <input type="text" name="email"><p> </p>
-            Contraseña: <input type="password" name="password"><p> </p>
-            Confirmar: <input type="password" name="pw_confirm"><p> </p>
-            Cumpleaños: <input type="date" name="date"><p> </p>
-
-        <p>Selecciona tu género:
+    <body>
         
-            Hombre<input type="radio" name="genero" value="hombre">        
-            Mujer<input type="radio" name="genero" value="Mujer">     
-            Otro<input type="radio" name="genero" value="otro"></p>
+        <form>
 
-        <p>Una breve descripcion de ti:</p>
+            <label>
+                Nombre: <input type="text" name="nombre">
+            </label><p> </p>
+
+            <label>
+                Apellido: <input type="text" name="apellido">
+            </label><p> </p>
+            
+            <label>
+                Email: <input type="text" name="email">
+            </label><p> </p>
+
+            <label>
+                Contraseña: <input type="password" name="password">
+            </label><p> </p>
+
+            <label>
+                Confirmar: <input type="password" name="pw_confirm">
+            </label><p> </p>
+
+            <label>
+                Cumpleaños: <input type="date" name="date">
+            </label><p> </p>
+
+            <p>Selecciona tu género:</p>
+            <label>
+                Hombre<input type="radio" name="genero" value="hombre">        
+                Mujer<input type="radio" name="genero" value="Mujer">     
+                Otro<input type="radio" name="genero" value="otro">
+            </label>
+
+            <p>Una breve descripcion de ti:</p>
         
-            <textarea name="descripcion"></textarea><p> </p>
+            <label>
+                <textarea name="descripcion"></textarea><p> </p>
+            </label>
 
-            Lenguaje favorito: 
-            <select name="lenguaje" >
-                <option value="javaScript">JavaScript</option>
-                <option value="python">Python</option>
-                <option value="c++">C++</option>
-            </select>
+            <label>
+                Lenguaje favorito: 
+                <select name="lenguaje" >
+                    <option value="javaScript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="c++">C++</option>
+                </select>
 
-        </label>
+            </label>
 
-    </form>
+            <p> </p>
+            <input type="submit" value="Presiona aquí para enviar">
 
 
+        </form>
+
+    </body>
 
 
 
