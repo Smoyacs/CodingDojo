@@ -1,22 +1,168 @@
+<!DOCTYPE html>
 <html>
 
-<head>
-    <title>NinjaMan</title>
-</head>
+    <head>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+         }
+            .row{
+                line-height: 0;
+            }
 
-<body>
-    <div style="background-color: blue; margin: 10px;
-        padding: 25px"></div>
-    <div style="background-color: blue; margin: 10px;
-    padding: 25px"></div>
-    <div style="background-color: blue; margin: 10px;
-    padding: 25px"></div>
-    <div style="background-color: blue; margin: 10px;
-    padding: 25px"></div>
-    <div style="background-color: blue; margin: 10px;
-    padding: 25px"></div>
+            .wall{background-color: blue;
+                  height: 40px;
+                  width: 40px;
+                  display: inline-block;}
+            
+            .sushi{background-color: black;
+                   background-image: url(img/sushi.png);
+                   background-size: contain;
+                   height: 40px;
+                   width: 40px;
+                   display: inline-block;}
+
+            .blank{background-color: black;
+                   height: 40px;
+                   width: 40px;
+                   display: inline-block;}
+            
+            #ninja{background-color: black;
+                   background-image: url(img/ninja.gif);
+                   background-size: contain;
+                   height: 40px;
+                   width: 40px;
+                   display: inline-block;
+                   position: absolute;}                
+        </style>
+    </head>
 
 
-</body>
+    <body>
+
+        <div id="world">
+
+            <div class="row">
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="blank"></div>
+                <div class="wall"></div>
+                <div class="sushi"></div>
+            </div>
+            <div class="row">
+                <div class="wall"></div>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <div class="sushi"></div>
+                <div class="wall"></div>
+            </div>
+            <div class="row">
+                <div class="wall"></div>
+                <div class="blank"></div>
+                <div class="wall"></div>
+                <div class="sushi"></div>
+                <div class="wall"></div>
+            </div>
+            <div class="row">
+                <div class="wall"></div>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <div class="sushi"></div>
+            </div>
+            <div class="row">
+                <div class="wall"></div>
+                <div class="wall"></div>
+                <div class="sushi"></div>
+                <div class="wall"></div>
+                <div class="wall"></div>
+            </div>
+
+        </div> <!-- id="world" -->
+
+    <div id='ninja'></div>
+
+    </body>
+
+    <script type="text/javascript">
+        var world = [
+            [1,2,0,0,1],
+            [1,0,1,0,1],
+            [1,2,1,0,1],
+            [1,2,0,0,1],
+            [1,2,0,0,1],
+            [1,0,1,0,1],
+            [1,2,1,0,1],
+            [1,2,0,0,1],
+        ];
+        
+        var world_dict = {
+            0: 'blank',
+            1: 'wall',
+            2: 'sushi'};
+
+        function draw_world(){
+
+            output = "";
+            for(var row=0; row<world.length; row++){ // slicing 
+                output += "<div class = 'row'>"
+
+                for(var x=0;x<world[row].length;x++){
+                    output += "<div class = '"+ world_dict[world[row][x]] +"'></div>"
+                }
+                output +="</div>"
+            }
+
+            document.getElementById('world').innerHTML=output;
+        }
+        draw_world();
+        
+        // Ninja //
+        var ninja = {
+            x:1,
+            y:1
+        }
+
+        function draw_ninja(){
+            document.getElementById('ninja').style.top = ninja.y * 40 + 'px'
+            document.getElementById('ninja').style.left = ninja.x * 40 + 'px'
+        }
+        draw_ninja();
+
+        document.onkeydown = function(e){
+
+            if(e.keyCode == 37){
+                if(world[ninja.y][ninja.x - 1] != 1){
+                    ninja.x--;
+                }
+            }
+
+            if(e.keyCode == 39){
+                if(world[ninja.y][ninja.x - 1] != 1){
+                    ninja.x++;
+                }
+            }
+
+            if(e.keyCode == 38){
+                if(world[ninja.y][ninja.x - 1] != 1){
+                    ninja.x--;
+                }
+            }
+
+            if(e.keyCode == 40){
+                if(world[ninja.y][ninja.x - 1] != 1){
+                    ninja.y++;
+                }
+            }
+
+            draw_ninja(); // actualiza ninja
+        }
+
+    </script>
+
+
+
+
 
 </html>
