@@ -1,0 +1,11 @@
+Re = (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}
+
+(?=.*[a-z]) - Al menos una letra en minuscula(a - z).
+
+(?=.*[A-Z]) - al menos una letra en mayuscula(A - Z).
+
+(?=.*[0-9]) -al menos un numero del 1 al 9(0-9).
+
+(?=.*[!@#$%^&*_=+-]) - al menos un simbolo (!@#$%^&*=+-_)
+
+{8,16} -> el total del largo debe ser mayor igual a 8 y menor igual a 6
