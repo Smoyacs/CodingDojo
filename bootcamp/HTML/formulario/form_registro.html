@@ -4,70 +4,103 @@
     <head>
         <meta charset="utf-8">
         <title>Mi formulario de Registro</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <h1>Mi formulario de Registro</h1>
+        <div>
+            <h1>Mi formulario de Registro</h1>
+        </div>
         
-        <form>
+        <div>      
+            <form>
+                
+                <label>
+                    Nombre: <input 
+                                type="text" 
+                                name="nombre" 
+                                placeholder="Ej, Sebastian"
+                                minlength="5" maxlength="40" required
+                                pattern="[A-Za-z0-9]+"
+                                title="Debe contener minimo 5 letras y no acepta simbolos"
+                                >
+                            
+                </label>
 
-            <label>
-                Nombre: <input type="text" name="nombre">
-            </label><p> </p>
+                <label>
+                    Apellido: <input 
+                                type="text" 
+                                name="apellido"
+                                placeholder="Ej, Moya"
+                                minlength="5" maxlength="40" required
+                                pattern="[A-Za-z0-9]+"
+                                >
+                </label>
+                
+                <label>
+                    Email: <input  
+                                type="text"
+                                name="email"
+                                placeholder="xxxx@gmail.com"
+                                required
+                                >
+                </label>
 
-            <label>
-                Apellido: <input type="text" name="apellido">
-            </label><p> </p>
+                <label>
+                    Contraseña: <input 
+                                    type="password"
+                                    name="password"
+                                    maxlength="6"
+                                    required
+                                    >
+                </label>
+
+                <label>
+                    Confirmar: <input 
+                                    type="password"
+                                    name="pw_confirm"
+                                    required
+                                    >
+                </label>
+
+                <label>
+                    Cumpleaños: <input type="date" name="date" required>
+                </label>
+
+                <p>Selecciona tu género:</p>
+                <label>
+                    Hombre:<input type="radio" name="genero" value="hombre">
+                </label>
+
+                <label>       
+                    Mujer:<input type="radio" name="genero" value="Mujer">
+                </label>
+
+                <label>     
+                    Otro:<input type="radio" name="genero" value="otro">
+                </label>
+
+                <p>Una breve descripcion de ti:</p>
             
-            <label>
-                Email: <input type="text" name="email">
-            </label><p> </p>
+                <label>
+                    <textarea name="descripcion"></textarea>
+                </label><p> </p>
 
-            <label>
-                Contraseña: <input type="password" name="password">
-            </label><p> </p>
+                <label>
+                    Lenguaje favorito: 
+                    <select name="lenguaje" >
+                        <option value="javaScript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="c++">C++</option>
+                    </select>
 
-            <label>
-                Confirmar: <input type="password" name="pw_confirm">
-            </label><p> </p>
+                </label>
 
-            <label>
-                Cumpleaños: <input type="date" name="date">
-            </label><p> </p>
+                <input type="submit" value="Presiona aquí para enviar">
 
-            <p>Selecciona tu género:</p>
-            <label>
-                Hombre:<input type="radio" name="genero" value="hombre">
-            </label>
-
-            <label>       
-                Mujer:<input type="radio" name="genero" value="Mujer">
-            </label>
-
-            <label>     
-                Otro:<input type="radio" name="genero" value="otro">
-            </label>
-
-            <p>Una breve descripcion de ti:</p>
-        
-            <label>
-                <textarea name="descripcion"></textarea>
-            </label><p> </p>
-
-            <label>
-                Lenguaje favorito: 
-                <select name="lenguaje" >
-                    <option value="javaScript">JavaScript</option>
-                    <option value="python">Python</option>
-                    <option value="c++">C++</option>
-                </select>
-
-            </label><p> </p>
-
-            <input type="submit" value="Presiona aquí para enviar">
-
-
-        </form>
+            </form>
+    </div>
+  
 
     </body>
 
