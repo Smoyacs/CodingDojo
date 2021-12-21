@@ -20,9 +20,9 @@
                                 type="text" 
                                 name="nombre" 
                                 placeholder="Ej, Sebastian"
-                                minlength="5" maxlength="40" required
                                 pattern="[A-Za-z0-9]+"
-                                title="Debe contener minimo 5 letras y no acepta simbolos"
+                                title="No acepta simbolos"
+                                required
                                 >
                             
                 </label>
@@ -32,8 +32,9 @@
                                 type="text" 
                                 name="apellido"
                                 placeholder="Ej, Moya"
-                                minlength="5" maxlength="40" required
                                 pattern="[A-Za-z0-9]+"
+                                title="No acepta simbolos"
+                                required
                                 >
                 </label>
                 
@@ -41,7 +42,7 @@
                     Email: <input  
                                 type="text"
                                 name="email"
-                                placeholder="xxxx@gmail.com"
+                                placeholder="Escribe un correo valido"
                                 required
                                 >
                 </label>
@@ -50,7 +51,8 @@
                     Contraseña: <input 
                                     type="password"
                                     name="password"
-                                    maxlength="6"
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}"
+                                    title="Requiere al menos una letra minuscula, una mayuscula y un simbolo"
                                     required
                                     >
                 </label>
@@ -59,6 +61,8 @@
                     Confirmar: <input 
                                     type="password"
                                     name="pw_confirm"
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}"
+                                    title="Requiere al menos una letra minuscula, una mayuscula y un simbolo"
                                     required
                                     >
                 </label>
@@ -99,9 +103,7 @@
                 <input type="submit" value="Presiona aquí para enviar">
 
             </form>
-    </div>
-  
-
+        </div>
     </body>
 
 
