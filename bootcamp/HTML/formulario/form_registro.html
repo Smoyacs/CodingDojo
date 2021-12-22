@@ -19,7 +19,7 @@
                     Nombre: <input 
                                 type="text" 
                                 name="nombre" 
-                                placeholder="Ej, Sebastian"
+                                placeholder="Ingrese su nombre"
                                 pattern="[A-Za-z0-9]+"
                                 title="No acepta simbolos"
                                 required
@@ -31,7 +31,7 @@
                     Apellido: <input 
                                 type="text" 
                                 name="apellido"
-                                placeholder="Ej, Moya"
+                                placeholder="Ingrese su apellido"
                                 pattern="[A-Za-z0-9]+"
                                 title="No acepta simbolos"
                                 required
@@ -52,6 +52,7 @@
                                     type="password"
                                     name="password"
                                     pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}"
+                                    placeholder="8 a 16 caracteres"
                                     title="Requiere al menos una letra minuscula, una mayuscula y un simbolo"
                                     required
                                     >
@@ -62,6 +63,7 @@
                                     type="password"
                                     name="pw_confirm"
                                     pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}"
+                                    placeholder="8 a 16 caracteres"
                                     title="Requiere al menos una letra minuscula, una mayuscula y un simbolo"
                                     required
                                     >
@@ -100,7 +102,10 @@
 
                 </label>
 
-                <input type="submit" value="Presiona aquí para enviar">
+                <label>
+                    <input type="submit" value="Presiona aquí para enviar">
+                </label>
+
 
             </form>
         </div>
@@ -109,7 +114,5 @@
 
         </div>
     </body>
-
-
 
 </html>
