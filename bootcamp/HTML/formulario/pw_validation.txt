@@ -6,6 +6,6 @@ Re = (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}
 
 (?=.*[0-9]) -al menos un numero del 1 al 9(0-9).
 
-(?=.*[!@#$%^&*_=+-]) - al menos un simbolo (!@#$%^&*=+-_)
+(?=.*[!@#$%^&*_=+-]) - al menos un simbolo
 
-{8,16} -> el total del largo debe ser mayor igual a 8 y menor igual a 6
+{8,16} -> el total del largo debe ser mayor igual a 8 y menor igual a 16
