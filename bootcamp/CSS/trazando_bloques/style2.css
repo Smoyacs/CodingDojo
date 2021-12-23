@@ -1,0 +1,83 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+    }
+    #container{
+        width: 970px;
+        /* height: 1000px; */
+        background-color: #1A335C;
+        margin: 0px auto;
+        padding: 5px;
+    }
+    #header{
+        height: 62px;
+        background-color: #CE3037;
+        margin: 3px 3px 1px 3px;
+        border-radius: 5px;
+    }
+
+    .header01{
+        padding: 10px;
+        color: #C3D2E9;
+    }
+
+    #panel_left{
+        width: auto;
+        background-color: #297C8D;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 15px;
+        margin-left: 8px;
+        border-radius: 25px;
+        padding: 25px;
+        color: #69DAE3;
+        font-size: smaller;
+
+    }
+    #panel_right{
+        /* height: 440px; */
+        width: 730px;
+        background-color: #0E1923;
+        display: inline-block;
+        margin-top: 15px;
+        vertical-align: top;
+        border-radius: 20px;
+        padding: 20px 10px;
+        margin-left: 10px;
+        color: #C3D2E9;
+        text-align: justify;       
+    }
+
+    #footer{
+        width: 930px;
+        height: 40px;
+        border-radius: 15px;
+        background-color: gray;
+        display: inline-block;
+        margin-top: 5px;
+        color: #C3D2E9; 
+        padding: 10px 0px 0px 20px ;
+        text-align: justify; 
+    }
+
+
+            /* visited link */
+    a:visited {
+            color: #69DAE3;
+        }
+
+
+    ul {
+        padding-left: 15px;
+    }
+
+    p{
+        margin-top: 10px;
+        font-size: small;
+    }
+
+    span{
+        color: #778BFF;
+    }
+
