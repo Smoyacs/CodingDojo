@@ -1,0 +1,137 @@
+*{
+    /* outline: 1px dotted red; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 970px;
+    margin: 0 20%;
+    background-color: #245177;
+}
+
+
+.header{
+    display: inline-block;
+}
+
+
+.header img{
+    width: 350px;
+    padding: 25px;
+}
+
+
+.tag-line{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 340px;
+    color: #fff;
+    
+}
+
+
+.tag-line p{
+    text-align: center;
+}
+
+
+.tag-line a{
+    color: #EFCB34;
+}
+
+
+.search{
+    background-color: #454544;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 8px 8px 3px -5px #000;
+}
+
+
+.search input{
+    height: 35px;
+    text-align: center;
+}
+
+
+.btn{
+    display: inline-block;
+    background-color: #245177;
+    padding: 5px;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    box-shadow: -1px -1px 0px 0px #f0f7fa;
+    color: #fff;
+    
+}
+
+.nav-menu{
+    display: flex;
+    background: radial-gradient(rgb(58, 120, 173) 0%, rgb(67, 125, 172) 46%);
+    padding: 10px;
+    justify-content: space-around;
+    margin: 10px 80px;
+    box-shadow: 3px 5px 3px 0px #000;
+    border-radius: 5px;
+
+}
+
+.nav-menu a{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.links-left{
+    margin: 30px 0 0 60px;
+    display: inline-block;
+}
+.links-left a{
+    color: #fff;
+    margin: 6px;
+    padding: 3px;
+    font-size: 20px;
+    
+}
+
+
+.links-left ul li{
+    width: 200px;
+    margin: 8px 8px 8px 8px;
+    text-align: center;
+    list-style: '>>';
+    list-style-position: inside;
+    
+}
+
+.links-left ul li::marker{
+    color: #EFCB34;
+    font-size: 10px;
+}
+
+.content-right{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 500px;
+    margin: 20px 80px;
+}
+
+.content-right p{
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.content-right h3{
+    color: #EFCB34;
+    margin: 10px;
+}
+
+.content-right h4{
+    color: #fff;
+}
+
