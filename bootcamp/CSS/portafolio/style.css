@@ -73,6 +73,9 @@ p{
     background-color: #EEE9EE;
 }
 
+.project_content{
+    height: 420px;
+}
 
 .img-project{
     width: 300px;
@@ -81,13 +84,14 @@ p{
 
 .technologies01{
     width: 300px;
+
 	display: inline-block;
-	margin-top: 53px;
+	/* margin-top: 53px; */
 }
 .technologies02{
     width: 300px;
 	display: inline-block;
-	margin-top: 35px;
+	/* margin-top: 35px; */
 }
 
 .logos{
