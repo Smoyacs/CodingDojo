@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px dotted red; */
+}
+
+    /* HEADER */
+
+header{
+    width: 970px;
+    margin: 0 10%;
+}
+
+header img{
+    width: 70px; 
+    position: absolute;
+    padding: 0;  
+}
+
+header h1{
+    font-size: 50px;
+    padding-left: 70px;
+}
+
+header span{
+    color: #22659E;
+}
+
+header h2{
+    font-size: 30px;
+    color: #fff;
+    padding-top: 5px;
+    padding-left: 20px;
+    background: radial-gradient(rgb(149, 154, 160) 0%, rgb(33, 102, 163) 36%);
+
+}
+
+    /* BARRA LATERAL (ASIDE) */
+
+aside{
+    width: 220px;
+    margin: 0 10%;
+    padding-top: 20px;
+    background: linear-gradient(360deg, rgb(241, 239, 239) 96%, rgb(201, 195, 195) 100%);}
+
+aside h1{
+    font-size: 20px;
+}
+
+aside span{
+    color: red;
+}
+
+aside p{
+    margin: 10px 0;
+}
+
+aside p span{
+    color: #22659E;
+}
+
+.aside_btn01{
+    width: 220px;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:10px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+    text-align: center;
+}
+
+.aside_btn02{
+    width: 220px;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:10px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+    text-align: center;
+}
+
+hr{
+    height: 3px;
+    background-color: #000;
+    margin: 10px 0;
+}
+
+aside h2{
+    text-align: center;
+    background-image: url(img/ad_background.png);
+    color: #fff;
+}
+
+aside img{
+    width: 40%;
+    height: 40%;
+
+}
+
+.aside_btn03{
+    display: block;
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:5px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+    margin: 20px 0;
+}
+
+
+    /* MAIN */
