@@ -31,7 +31,7 @@ body {
 
 .header02{
     display: inline-block;
-    margin-left: 20px;
+    margin: -1;
 }
 
 .photo_of_me{
