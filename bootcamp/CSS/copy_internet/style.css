@@ -196,9 +196,6 @@ margin-left: 50px;
     
 }
 
-.tagline_info{
-    height: 50px;
-}
 
 .tagline img{
     width: 45px;
@@ -217,6 +214,7 @@ margin-left: 50px;
     font-size: 25px;
     color: #00C1DE;
     font-weight: bold;
+    vertical-align: top;
 }
 
 .tagline_info_number_international{
@@ -225,7 +223,7 @@ margin-left: 50px;
 }
 
 hr.main{
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 /* content */
