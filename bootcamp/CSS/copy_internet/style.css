@@ -6,7 +6,7 @@
     /* outline: 1px dotted red; */
 }
 
-container {
+.container {
     display: grid;
     height: 100%;
     padding: 5px;
@@ -26,7 +26,7 @@ container {
 
 /* HEADER */
 
-header{
+.header{
     grid-area: header;
 
 }
@@ -36,17 +36,17 @@ header{
     position: absolute;
 }
 
-header h1{
+.header h1{
     font-size: 50px;
     padding-left: 80px;
     padding-top: 5px;
 }
 
-header span{
+.header span{
     color: #22659E;
 }
 
-header h2{
+.header h2{
     height: 60px;
     font-size: 35px;
     color: #fff;
@@ -58,7 +58,7 @@ header h2{
 
 /* BARRA LATERAL (SIDE) */
 
-sidebar{
+.sidebar{
     grid-area: sidebar;
     display: inline-block;
     width: 220px;
@@ -66,19 +66,19 @@ sidebar{
     background: linear-gradient(360deg, rgb(241, 239, 239) 96%, rgb(201, 195, 195) 100%);
 }
 
-sidebar h1{
+.sidebar h1{
     font-size: 20px;
 }
 
-sidebar span{
+.sidebar span{
     color: red;
 }
 
-sidebar p{
+.sidebar p{
     margin: 10px 0;
 }
 
-sidebar p span{
+.sidebar p span{
     color: #22659E;
 }
 
@@ -124,7 +124,7 @@ hr{
     margin: 10px 0;
 }
 
-sidebar h2{
+.sidebar h2{
     padding-top: 20px;
     text-align: center;
     background-image: url(img/ad_background.png);
@@ -134,7 +134,7 @@ sidebar h2{
 
 }
 
-sidebar img{
+.sidebar img{
     width: 50%;
     height: 50%;
     display: block;
@@ -161,7 +161,7 @@ sidebar img{
     /* MAIN CONTENT */
 
 
-main_content {
+.main_content {
 /* background-color: #d0d9e6;  */
 grid-area: main-content;
 margin-left: 50px;
@@ -169,81 +169,81 @@ margin-left: 50px;
 
 /* links */
 
-main_content a{
+.main_content a{
     text-decoration: none;
     color: #089BB0;
 }
 
 /* header */
-main_content header{
+.main_content .header{
     display: flex;
     justify-content: space-between;
 }
 
-main_content header_btn a{
+.header_btn a{
     font-size: 20px;
     text-decoration: none;
     color: #22649F;
 }
 
-main_content header_btn img{
+.header_btn img{
     width: 20px;
 }
 
-main_content tagline{
+.tagline{
     display: flex;
     height: 50px;
-    padding: 10px;
+    
 }
 
-tagline_info{
+.tagline_info{
     height: 50px;
 }
 
-tagline img{
+.tagline img{
     width: 45px;
     height: 45px;
     margin-right: 5px;
 }
 
-tagline p.tagline_info{
+.tagline_info{
     font-size: 12px;
     font-weight: bold;
     text-align: center;
 
 }
 
-tagline p.tagline_info_number{
+.tagline_info_number{
     font-size: 25px;
     color: #00C1DE;
     font-weight: bold;
 }
 
-tagline p.tagline_info_number_international{
+.tagline_info_number_international{
     font-size: 11px;
     text-align: center;
 }
 
 hr.main{
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 /* content */
 
-content{
+.content{
     word-spacing: 3px;
     line-height: 150%;
     font-weight: 600;
 }
 
-content h2{
+.content h2{
     color: #22649F;
     margin: 5px;
 
     
 }
 
-content ul li{
+.content ul li{
     font-size: 1.17em;
     list-style-position: outside;
     padding-left: 10px;
@@ -256,19 +256,19 @@ content ul li{
     justify-content: center;
 }
 
-content img{
+.content img{
     width: 500px;
 
 }
 
-content ul li.li_number{
+.content ul li.li_number{
     list-style: number;
     list-style-position: inside;
     margin: 10px 0 10px 20px;
 }
 
 /*  FOOTER */
-footer {
+.footer {
     display: flex;
     height: 300px;
     margin: 10px 0;
@@ -276,21 +276,21 @@ footer {
 
 }
 
-footer img{
+.footer img{
     width: 300px;
     padding: 10px;
     display: inline-block;
     position: relative;
 }
 
-footer_content{
+.footer_content{
     vertical-align: top;
     width: auto;
     height: auto;
     display: inline-block;
 }
 
-footer_content h2{
+.footer_content h2{
     color: #22649F;
     margin: 15px 0;
 
