@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px dotted red;
+}
+
+.container{
+    width: 100%;
+    padding: 0 50px;
+}
+
+h1{
+    text-align: center;
+}
+
+.pokemones{
+
+    width: 70%;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #000;
+
+}
+
+.pokemones img{
+    background-color: #fff;
+    margin: 20px;
+}
+
+.pokedex{
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, red, rgba(255, 0, 0, 0.238));
+    color: #fff;
+}
+
+.pokedex h4{
+    
+    background-color: #000;
+
+}
+
+.pokedex ul{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+
+.pokedex p{
+    margin: 8px;
+}
