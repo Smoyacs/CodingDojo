@@ -1,8 +1,6 @@
 #1. Tamaño grande: dada una lista, escriba una función que cambie todos los números positivos de la lista a "big".
 # Ejemplo: biggie_size ([- 1, 3, 5, -5]) devuelve la misma lista, pero cuyos valores son ahora [-1, "big", "big", -5]
 
-from itertools import count
-
 
 def biggie_size(list):
     for i in range(len(list)):
