@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <h1>Checkboard</h1>
+    <table>
+    {% for i in range(filas): %}
+        <tr>
+            {% for j in range(columnas): %} 
+                <td class="color{{ (i+j)%2+1 }}"></td> <!-- La operacion de color variara entre 1 y 2 -->
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+
+    
+</body>
+</html>
