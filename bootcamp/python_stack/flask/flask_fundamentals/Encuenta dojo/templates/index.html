@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mi formulario de Registro</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+
+<body>
+
+    <h1 style="text-align: center;">Mi formulario de Registro</h1>
+    
+    <div class="container">
+        <form method="post">
+            
+            <div class="full_name">
+                <label>
+                    Nombre: <input 
+                                type="text" 
+                                name="nombre" 
+                                placeholder="Ingrese su nombre"
+                                pattern="[A-Za-z0-9]+"
+                                title="No acepta simbolos"
+                                required
+                                >
+                </label>
+
+                <label>
+                    Apellido: <input 
+                                type="text" 
+                                name="apellido"
+                                placeholder="Ingrese su apellido"
+                                pattern="[A-Za-z0-9]+"
+                                title="No acepta simbolos"
+                                required
+                                >
+                </label>
+            </div>
+
+            <div class="password">
+                <label>
+                    Contraseña: <input 
+                                    type="password"
+                                    name="password"
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}"
+                                    placeholder="8 a 16 caracteres"
+                                    title="Requiere al menos una letra minuscula, una mayuscula y un simbolo"
+                                    required
+                                    >
+                </label>
+                
+                <label>
+                    Email: <input  
+                                type="text"
+                                name="email"
+                                placeholder="Escribe un correo valido"
+                                required
+                                >
+                </label>
+
+            </div>
+
+            <label>
+                Cumpleaños: <input type="date" name="date" required>
+            </label>
+
+            <label>
+                Lenguaje favorito: 
+                <select name="lenguaje" >
+                    <option value="javaScript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="c++">C++</option>
+                </select>
+            </label>
+
+            <p>Una breve descripcion de ti:</p>
+        
+            <label>
+                <textarea name="descripcion" placeholder="Escribe una pequeña referencia sobre ti" rows="5" cols="50"></textarea>
+            </label>
+
+            <label>
+                <input type="submit" value="Presiona aquí para enviar">
+            </label>
+
+        </form>
+    </div>
+    </body>
+</html>
