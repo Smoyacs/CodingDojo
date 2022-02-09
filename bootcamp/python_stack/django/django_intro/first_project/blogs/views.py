@@ -7,7 +7,7 @@ def root(request):
     return redirect('/blogs')
 
 def index(request):
-    return HttpResponse("placeholder para luego mostrar una lista de todos los blogs")
+    return render(request, "index.html")
 
 def new(request):
     return HttpResponse("placeholder para mostrar un nuevo formulario para crear un nuevo blog")
