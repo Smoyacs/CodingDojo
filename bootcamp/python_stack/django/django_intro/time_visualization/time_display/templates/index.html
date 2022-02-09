@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Visualization</title>
+
+    <!-- CSS LINK -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
-
-    <span>Current time: {{current_time}} </span>
+    <h1> Informacion sobre la hora</h1>
+    <span>Hora actual: {{current_time}} </span>
     
 </body>
 </html>
