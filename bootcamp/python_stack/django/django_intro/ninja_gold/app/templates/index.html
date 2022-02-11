@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Gold Django</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row bg-dark text-warning d-flex justify-content-center ">
+            <h1>Ninja Gold!</h1>
+        </div>
+        <div class="row score mb-2">
+            <h4>Cantidad de oro: <span> {{ request.session.oro_total }} </span></h4>
+        </div>
+
+        <div class="row">
+            <div class="place border border-dark rounded col-md-3 pt-2 pb-4">
+
+                <h3 class="d-flex justify-content-center">Granja</h3>
+                <p class="d-flex justify-content-center">ganar 10-20 oro</p>
+
+                <form action="/process_money" method="post" class="d-flex justify-content-center">
+                    {% csrf_token %}
+                    <input type="hidden" name="construccion" value="granja" />
+                    <input type="submit" value="Encontrar Oro!" class="btn btn-warning" />
+                </form>
+
+            </div>
+            <div class="place border border-dark rounded col-md-3 pt-2 pb-4">
+                <h3 class="d-flex justify-content-center">Cueva</h3>
+                <p class="d-flex justify-content-center">ganar 5-10 oro</p>
+                <form action="/process_money" method="post" class="d-flex justify-content-center">
+                    {% csrf_token %}
+                    <input type="hidden" name="construccion" value="cueva" />
+                    <input type="submit" value="Encontrar Oro!" class="btn btn-warning" />
+                </form>
+            </div>
+            <div class="place border border-dark rounded col-md-3 pt-2 pb-4">
+                <h3 class="d-flex justify-content-center">Casa</h3>
+                <p class="d-flex justify-content-center">ganar 2-5 oro</p>
+                <form action="/process_money" method="post" class="d-flex justify-content-center">
+                    {% csrf_token %}
+                    <input type="hidden" name="construccion" value="casa" />
+                    <input type="submit" value="Encontrar Oro!" class="btn btn-warning" />
+                </form>
+            </div>
+            <div class="place border border-dark rounded col-md-3 pt-2 pb-4">
+                <h3 class="d-flex justify-content-center">Casino</h3>
+                <p class="d-flex justify-content-center">ganar/perder 0-50 oro</p>
+                <form action="/process_money" method="post" class="d-flex justify-content-center">
+                    {% csrf_token %}
+                    <input type="hidden" name="construccion" value="casino" />
+                    <input type="submit" value="Encontrar Oro!" class="btn btn-warning" />
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <h5><u>Registro de actividad</u>:</h5>
+            <div class="registro_actividad border border-dark pl-3 mb-2">
+                <p>{{ request.session.mensaje|safe }}</p>                <!-- NOTAR QUE EL COMANDO SAFE EVITA LA MUESTRA DE CONTENIDO PERTENECIENTE A LA ESTRUCTURA DEL HTML  -->
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <a href="/reset" class="btn btn-dark text-warning" role="button" name="reset">Empezar un nuevo juego</a>
+        </div>
+
+    </div>
+</body>
+</html>
+
+

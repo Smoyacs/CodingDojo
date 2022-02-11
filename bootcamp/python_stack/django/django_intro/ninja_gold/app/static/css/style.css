@@ -1,0 +1,14 @@
+.ganador {
+    color: green
+}
+.perdedor {
+    color: red
+}
+.registro_actividad {
+    overflow: scroll;
+    height: 150px;
+    width: 100%;
+}
+span {
+    color:rgb(255,193,7)
+}
