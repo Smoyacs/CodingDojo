@@ -1,0 +1,44 @@
+from apps.user_app.models import *
+
+
+# crear usuarios #
+
+alonso = Users.objects.create(first_name="Alonso",last_name="Perez",email_address="random@email.com",age=21)
+
+seba = Users.objects.create(first_name="Seba",last_name="Orellana",email_address="random@email.com",age=25)
+
+pedro = Users.objects.create(first_name="Pedro",last_name="Gonzalez",email_address="random@email.com",age=43)
+
+#############################################################################################################
+
+
+# Mostar usuarios #
+
+Users.objects.all()
+
+Users.objects.last()
+
+Users.objects.first()
+
+#############################################################################################################
+
+
+# Para modificar es necesario guardar la consulta dentro de una variable #
+
+x = Users.objects.get(id=3)
+x.last_name = "Pancakes"
+x.save()
+
+
+
+y = Users.objects.get(id=2)
+y.delete()
+
+#############################################################################################################
+
+
+# ordenar usuarios #
+
+Users.objects.order_by('first_name')
+
+Users.objects.order_by('-first_name') # orden descendente 
