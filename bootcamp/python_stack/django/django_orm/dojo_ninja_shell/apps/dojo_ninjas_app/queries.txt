@@ -1,0 +1,44 @@
+1) Crea 3 dojos
+    Dojos.objects.create(name="CodingDojo", city="Silicon Valley", state="CA")
+    Dojos.objects.create(name="CodingDojo", city="Bellevue", state="WA")
+    Dojos.objects.create(name="CodingDojo", city="Chicago", state="IL")
+
+
+2) Elimina los 3 dojos (ej: Dojos.objects.get(id=1).delete())
+    c = Dojos.objects.get(id=1)
+    c.delete()
+    c = Dojos.objects.get(id=2)
+    c.delete()
+    Dojos.objects.get(id=3).delete()
+
+3) Crea 3 dojos denuevo
+    Dojos.objects.create(name="CodingDojo", city="Silicon Valley", state="CA")
+    Dojos.objects.create(name="CodingDojo", city="Bellevue", state="WA")
+    Dojos.objects.create(name="CodingDojo", city="Chicago", state="IL")
+
+4) Crea 3 ninjas que pertenezcan al primer dojo
+    a = Dojos.objects.first()
+    Ninja.objects.create(first_name="alex", last_name="burton", dojo=a)
+    Ninja.objects.create(first_name="brenda", last_name="ajax", dojo=a)
+    Ninja.objects.create(first_name="leon", last_name="butter", dojo=a)
+
+5) Crea 3 ninjas que pertenezcan al segundo dojo
+    b = Dojos.objects.get(id=5)  ---> debido a que no se resetea el "ID"
+    Ninja.objects.create(first_name="Ignacio", last_name="Lopez", dojo=b)
+    Ninja.objects.create(first_name="Pedro", last_name="Ramirez", dojo=b)
+    Ninja.objects.create(first_name="francisco", last_name="Alvarado", dojo=b)
+
+6) Crea 3 ninjas que pertenezcan al tercero dojo
+    c = Dojos.objects.last()
+    Ninja.objects.create(first_name="Camila", last_name="Chavez", dojo=c)
+    Ninja.objects.create(first_name="Sebastian", last_name="Urtubia", dojo=c)
+    Ninja.objects.create(first_name="Roberto", last_name="Perez", dojo=c)
+
+7) Muestra los ninjas que pertenezcan al primer dojo
+    Ninja.objects.filter(dojo=a).values()
+
+8) Muestra los ninjas que pertenezcan al ultimo dojo
+    Ninja.objects.filter(dojo=c).values()
+
+
+    Si se desea resetear la id es posible ocupar python manage.py flush-->(Elimina la base de datos)
