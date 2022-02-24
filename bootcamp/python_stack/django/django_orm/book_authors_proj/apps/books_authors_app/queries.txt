@@ -1,0 +1,63 @@
+from apps.books_authors_app.models import Book, Author
+
+    # Crear libros #
+Book.objects.create(title="C Sharp",desc="")
+Book.objects.create(title="Java",desc="")
+Book.objects.create(title="Python",desc="")
+Book.objects.create(title="PHP",desc="")
+Book.objects.create(title="Ruby",desc="")
+
+    # Crear Autores #
+Author.objects.create(first_name="Jane",last_name="Austen")
+Author.objects.create(first_name="Emily",last_name="Dickinson")
+Author.objects.create(first_name="Fyodor",last_name="Dostoyevsky")
+Author.objects.create(first_name="William",last_name="Shakespeare")
+Author.objects.create(first_name="Lau",last_name="Tzu")
+
+    #       Cambiar nombre C Sharp -> C#      # 
+csharp = Book.objects.get(title="C Sharp")
+csharp.title = "C#"
+csharp.save()
+
+    # Cambiar el primer nombre # 
+auth4 = Author.objects.get(id=4)
+auth4.first_name = "Bill"
+auth4.save()
+
+    # Asigna el primer autor a los primeros 2 libros #
+book1 = Book.objects.get(id=1)
+book2 = Book.objects.get(id=2)
+auth1 = Author.objects.get(id=1)
+auth1.books.add(book1, book2)
+
+    # Asigne el segundo autor a los primeros 3 libros #
+book3 = Book.objects.get(id=3)
+auth2 = Author.objects.get(id=2)
+auth2.books.add(book1, book2, book3)
+
+    # Asigna el tercer autor a los primeros 4 libros #
+book4 = Book.objects.get(id=4)
+auth3 = Author.objects.get(id=3)
+auth3.books.add(book1, book2, book3, book4)
+
+    # Asigne el cuarto autor a los primeros 5 libros #
+book5 = Book.objects.get(id=5)
+auth4 = Author.objects.get(id=4)
+auth4.books.add(book1, book2, book3, book4, book5)
+
+    # Recupera a todos los autores del tercer libro #
+book3.authors.all()
+
+    # Eliminar al primer autor del tercer libro #
+c = Book.objects.get(id=3).authors
+c.remove()
+
+    # Agregue el quinto autor como uno de los autores del segundo libro #
+auth5 = Author.objects.get(id=5)
+book2.authors.add(auth5)
+
+     # Encuentra todos los libros de los que el tercer autor es parte #
+Book.objects.filter(authors=auth3)
+
+    # Encuentra todos los autores que contribuyeron al quinto libro #
+Author.objects.filter(books=book5)
