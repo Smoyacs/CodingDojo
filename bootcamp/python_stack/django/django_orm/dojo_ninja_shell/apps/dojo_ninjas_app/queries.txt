@@ -1,10 +1,10 @@
-1) Crea 3 dojos
+1) Crea 3 nuevos dojos
     Dojos.objects.create(name="CodingDojo", city="Silicon Valley", state="CA")
     Dojos.objects.create(name="CodingDojo", city="Bellevue", state="WA")
     Dojos.objects.create(name="CodingDojo", city="Chicago", state="IL")
 
 
-2) Elimina los 3 dojos (ej: Dojos.objects.get(id=1).delete())
+2) Elimina los 3 dojos
     c = Dojos.objects.get(id=1)
     c.delete()
     c = Dojos.objects.get(id=2)
@@ -40,5 +40,16 @@
 8) Muestra los ninjas que pertenezcan al ultimo dojo
     Ninja.objects.filter(dojo=c).values()
 
+9) Recupera el último dojo del ninja
+    Ninja.objects.last().dojo
+
+10) Agrega un nuevo campo de texto llamado "desc" a su clase de Dojo
+    en models.py:
+            class Dojos
+                ''''
+            desc = models.CharField(max_length=255, default='dojo antiguo')
+
+11) Crear un nuevo dojo
+    Dojos.objects.create(name="CodingDojo", city="Santiago", state="CL")
 
     Si se desea resetear la id es posible ocupar python manage.py flush-->(Elimina la base de datos)
