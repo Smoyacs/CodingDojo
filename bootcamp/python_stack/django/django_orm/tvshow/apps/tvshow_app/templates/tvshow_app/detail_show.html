@@ -1,0 +1,41 @@
+{% extends "tvshow_app/base.html"%}
+
+{% block titulo %}Read (One){% endblock %}
+
+{% block estilos %}
+    <style>
+        .btn_header{
+            margin-left: 600px;
+        }
+        a{
+            margin-left: 10px;
+        }
+
+        .main{
+            width: 700px;
+            margin: 0 auto;
+        }
+
+    </style>
+{% endblock %}
+{% block contenido %}
+
+    <div class="main">
+
+        <header>
+            <h1 >TV-SHOW {{ show.id }}</h1>
+            <a href="{% url 'tvshow_app:show_list' %}" class="btn_header">Back</a>
+        </header>
+
+
+        <div class="content d-inline-flex flex-column">
+            <p>Title: {{ show.title }}</p>
+            <p>Network: {{ show.network }}</p>
+            <p>Release Date: {{ show.release_date }}</p>
+            <p>Description: {{ show.description }}</p>
+        </div>
+        
+        <p class="footer">Last Updated: {{ show.updated_at }}</p>
+        <h4><a href="{% url 'tvshow_app:show_edit' id=show.id%}">Edit</a> | <a href="{% url 'tvshow_app:show_delete' id=show.id%}">Delete</a></h4>
+    </div>  
+{% endblock %}
