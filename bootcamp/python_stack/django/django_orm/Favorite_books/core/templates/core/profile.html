@@ -1,0 +1,26 @@
+{% extends "core/base.html"%}
+
+{% block titulo %}BIENVENIDA{% endblock %}
+
+
+{% block contenido %}
+
+    <div class="container mt-5">
+        <h1>Libros Favoritos</h1>
+        <hr>
+    </div>
+
+    <div class='row'>
+            <div class='container col-5 align-content-center justify-content-center'>
+                <h3>Todos Tus Libros Favoritos</h3>
+                <hr>
+                {% for book in favorite_books %}
+                    <p> <strong>Libro: </strong>{{book.title}}</a></p>
+                    <p> <strong>Subido por: </strong>{{book.uploaded_by.first_name}} {{book.uploaded_by.last_name}}</p>
+                    <hr>
+                {% endfor %}
+            </div>
+    </div>
+
+
+{% endblock %}

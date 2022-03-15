@@ -1,0 +1,103 @@
+{% extends "core/base.html"%}
+
+{% block titulo %}BIENVENIDA{% endblock %}
+
+{% block estilos %}
+
+<style>
+
+    {% comment %} h1{
+        text-align: center;
+        font-size: 50px;
+        margin-top: 100px;
+    } {% endcomment %}
+</style>
+
+{% endblock %}
+
+{% block contenido %}
+
+<div class="container mt-5">
+    <h1>Detalles del Libro</h1>
+    <hr>
+</div>
+<div class='row'>
+        <div class='d-flex col-6 align-content-center justify-content-center'>
+            {% if es_creador is True  %}
+            <h1>es verdadero</h1>
+            {% endif %}
+            {% if formModel%}
+            <form class='' action='' method='post'>
+                {% csrf_token %}
+                {{ formModel.non_field_errors }}
+
+                {% for field in formModel %}
+                <div class="mb-2">
+                    <label for="{{ field.id_for_label }}" class="col-4 col-form-label">{{ field.label }}</label>
+                    <div class="col-12">
+                        {{ field }}
+                    </div>
+                    {% if field.errors %}
+
+                    <div class="alert alert-danger mt-2" role="alert">
+                        {% for error in field.errors %}
+                        {{ error }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    {% if field.help_text %}
+                    <p class="help">{{ field.help_text|safe }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-warning d-flex mb-2" type="submit">Editar</button>
+                    <a href="{% url 'core:destroy' id=current_book.id %}" class='btn btn-danger align-middle mb-2'>Eliminar</a>
+                </div>
+
+
+                <hr>
+
+                <div>
+                    <p> <strong>Fecha Creacion:</strong> {{created_at}}</p>
+                    <p> <strong>Última fecha de modificacion:</strong> {{updated_at}}</p>
+                </div>
+
+            </form>
+            {% else %}
+            <div>
+                <p> <strong>Título:</strong> {{current_book.title}}</p>
+                <p> <strong>Agregado por Usuario:</strong> {{current_book.uploaded_by.first_name}} {{current_book.uploaded_by.last_name}}</p>
+                <p> <strong>Fecha Creacion:</strong> {{current_book.created_at}}</p>
+                <p> <strong>Última fecha de modificacion:</strong> {{current_book.updated_at}}</p>
+                <p> <strong>Descripción:</strong> {{current_book.description}}</p>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class='container col-5 align-content-center justify-content-center'>
+            <h3>Todos los Seguidores de este libro:</h3>
+            <hr>
+            {% for user in users_like %}
+
+                <p>{{user.first_name}} {{user.last_name}} 
+                    {% if user.id == request.session.usuario.id %}
+                        <a class='btnUnfollow' href='{% url 'core:dislike' id=current_book.id %}'>Dejar de Seguir este libro</a>
+                    {% endif %} 
+                </p>
+
+                <hr>
+            {% endfor %}
+
+            {% for user_dis in users_dislike %}
+                {% if user_dis.id == request.session.usuario.id %}
+                    <form action="{% url 'core:like' id=current_book.id %}" method="POST">
+                        {% csrf_token %}
+                        <button class='btn btn-success' type='submit'>Añade este Libro a tus Favoritos</button>
+                    </form>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+{% endblock %}
